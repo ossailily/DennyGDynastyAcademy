@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denny G Dynasty Academy | Custom Cakes , Pastries & Makeup Glam</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Google Fonts – Elegant + Clean -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome for WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navbar – Contact button pushed to the right edge -->
+  <nav class="navbar navbar-expand-lg fixed-top modern-navbar" style="background-color: #f8a8b0">
+    <div class="container-fluid px-4 px-lg-5"> <!-- wider padding for edge feel -->
+
+      <!-- Logo (left) -->
+      <a class="navbar-brand me-0 me-lg-5" href="index.html">
+        <img src="assets/img/DENNYG.png" alt="Denny Dynasty Academy" height="65">
+      </a>
+
+      <!-- Hamburger Toggler -->
+      <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger top"></span>
+        <span class="hamburger middle"></span>
+        <span class="hamburger bottom"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <!-- Centered links -->
+        <ul class="navbar-nav mx-auto gap-4 gap-lg-5">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="beautyartistry.html">Beauty Artistry</a></li>
+          <li class="nav-item"><a class="nav-link" href="creations.html">Creations</a></li>
+        </ul>
+
+        <!-- Contact button – now at far right edge on desktop -->
+        <a href="contact.html" class="btn btn-dark rounded-pill px-4 py-2 fw-medium contact-btn ms-auto">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- CART ICON -->
+  <div class="cart-box">
+    🛒 Cart (<span id="cart-count">0</span>)
+  </div>
+  <!-- CART MODAL -->
+  <div class="cart-modal" id="cartModal">
+    <h5>Your Cart</h5>
+    <ul id="cart-items"></ul>
+
+    <button class="btn btn-dark w-100 mt-3" onclick="checkoutCart()">
+      Checkout via WhatsApp
+    </button>
+  </div>
+
+
+  <section class="hero-god position-relative">
+    <img src="assets/img/dennygdyacademy.jpg" alt="Luxury Cakes and Beauty" class="img-fluid w-100">
+
+    <!-- Overlay -->
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
+
+    <!-- Content -->
+    <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+      <span class="hero-tag d-block mb-3 fs-6">Luxury Cakes • Pastries • Makeup</span>
+
+      <h1 class="display-4 fw-bold mb-3">
+        DENNYGDYNASTY<br>
+        ACADEMY
+      </h1>
+
+      <p class="lead mb-4">
+        Premium cakes, pastries, and professional makeup
+        designed with elegance for every celebration.
+      </p>
+
+      <div class="hero-actions mb-4">
+        <a href="about.html" class="btn btn-dark rounded-pill px-4 me-2 mb-2">View Creations</a>
+        <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 mb-2">Contact Us</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="hero-social d-flex justify-content-center gap-3">
+        <a href="https://www.tiktok.com/@dennygdyanastyacedemy?_r=1&_t=ZS-937c5vbVsym" target="_blank"
+          class="text-white fs-4">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com/dennygdynasty?igsh=NGhObnY1ejhsYndt" target="_blank" class="text-white fs-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="text-white fs-4">
+          <i class="fab fa-facebook-f"></i>
+          <p></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional CSS -->
+  <style>
+    .hero-god {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .hero-god img {
+
+      object-fit: cover;
+      height: 170%;
+    }
+
+    .hero-overlay {
+      z-index: 1;
+    }
+
+    .hero-content {
+      z-index: 2;
+    }
+
+    .hero-social a:hover {
+      color: #f8a8b0;
+      /* Pink hover effect */
+      transition: 0.3s;
+    }
+  </style>
+
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- IMAGE -->
+        <div class="col-lg-6">
+          <div class="about-image" data-aos="fade-up">
+            <img src="assets/img/dennyimg2.jpg" alt="About Denny Dynasty Academy">
+          </div>
+        </div>
+
+        <!-- TEXT -->
+        <div class="col-lg-6" data-aos="zoom-in">
+          <span class="about-tag">About Us</span>
+          <h2>Denny G Dynasty Academy</h2>
+
+          <p>
+            Denny G Dynasty Academy is a premium beauty and culinary brand
+            built on passion, creativity, and attention to detail.
+            <br><br>
+            We specialize in luxury cakes, pastries, surprise packages,
+            food trays, and professional makeup services designed
+            to elevate every celebration.
+          </p>
+
+          <p>
+            From elegant bridal looks to beautifully crafted custom cakes,
+            every service is delivered with precision, style,
+            and a commitment to excellence.
+            <br><br>
+            We don’t just create — we craft experiences that leave
+            lasting impressions.
+          </p>
+
+          <a href="about.html" class="btn about-btn mt-3">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="services-section">
+    <div class="container">
+
+      <div class="services-header text-center">
+        <span class="services-tag" data-aos="fade-left">Our Services</span>
+        <h2 data-aos="fade-right">What We Offer</h2>
+        <p data-aos="fade-up">
+          Thoughtfully crafted cakes, pastries and professional makeup services
+          designed to elevate your special moments.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- SERVICE 1 -->
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dennycakes1.jpg" alt="Custom Cakes">
+          </div>
+          <h3>Custom Cakes</h3>
+          <p>
+            Elegant, bespoke cakes designed to match your celebration
+            with premium ingredients and flawless finishing.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20Denny%20Dynasty%20Academy,%20I%20want%20to%20place%20an%20order."
+            class="service-btn">
+            Order Now
+          </a>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dynastysmallchops1.jpg" alt="Pastries">
+          </div>
+          <h3>Pastries & Treats</h3>
+          <p>
+            Delicious pastries, small chops and sweet treats crafted
+            with creativity, quality and attention to detail.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20Denny%20Dynasty%20Academy,%20I%20want%20to%20place%20an%20order."
+            class="service-btn">
+            Order Now
+          </a>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dynastymakeup.jpg" alt="Professional Makeup">
+          </div>
+          <h3>Professional Makeup</h3>
+          <p>
+            Soft glam, bridal and event makeup services designed to
+            enhance natural beauty with a refined touch.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20Denny%20Dynasty%20Academy,%20I%20want%20to%20place%20an%20order."
+            class="service-btn">
+            Book Now
+          </a>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dynastystudentspraticals.jpg" alt="Cake Decorating Classes">
+          </div>
+          <h3>Cake Decorating Classes</h3>
+          <p>
+            Learn to decorate cakes like a professional with step-by-step guidance and hands-on practice.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20enroll%20for%20Cake%20Decorating%20Classes"
+            class="service-btn">
+            Enroll Now
+          </a>
+        </div>
+
+        <!-- SERVICE5 -->
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dynastyicecream.jpg" alt="Ice Cream Treats">
+          </div>
+          <h3>Ice Cream Treats</h3>
+          <p>
+            Delicious ice creams made with premium ingredients—perfect for your events or personal treat.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Ice%20Cream%20Treats"
+            class="service-btn">
+            Order Now
+          </a>
+        </div>
+
+        <!-- SERVICE6 -->
+
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-image">
+            <img src="assets/img/dynastysuprisepackage.jpg" alt="Surprise Packages">
+          </div>
+          <h3>Surprise Packages</h3>
+          <p>
+            Thoughtfully curated surprise packages for birthdays, anniversaries, or special celebrations.
+          </p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Surprise%20Package"
+            class="service-btn">
+            Book Now
+          </a>
+        </div>
+
+      </div>
+      <div class="text-center mt-5" data-aos="zoom-in">
+        <a href="about.html" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="menu-section">
+    <div class="container">
+
+      <div class="menu-header text-center">
+        <span class="menu-tag" data-aos="fade-left">Our Menu</span>
+        <h2 data-aos="fade-right">Explore Our Offerings</h2>
+        <p data-aos="zoom-in">
+          Browse our carefully crafted cakes, pastries, and makeup services. Click a category to filter.
+        </p>
+
+        <!-- CATEGORY FILTER -->
+        <div class="menu-filter mt-4" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+
+          <button class="filter-btn" data-filter="cakes">Cakes</button>
+          <button class="filter-btn" data-filter="pastries">Pastries</button>
+          <button class="filter-btn" data-filter="anniversary">Suprises</button>
+          <button class="filter-btn" data-filter="makeup">Beauty Artistry</button>
+        </div>
+      </div>
+
+      <!-- MENU ROWS -->
+      <div class="menu-grid mt-5">
+
+        <!-- Example Cake -->
+
+
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dennycakes1.jpg" alt="Wedding Cake">
+          </div>
+          <h3>Wedding Cake</h3>
+          <p>₦120,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Wedding%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Wedding Cake - ₦120,000')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastyhyperrealisticcake.jpg" alt="Hyper Realistic Cake">
+          </div>
+          <h3>Hyper Realistic Cake</h3>
+          <p>₦150,000</p>
+
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Hyper%20Realistic%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Hyper Realistic Cake - ₦150,000')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastywhitechocolateganache.jpg" alt="Anniversary Cake">
+          </div>
+          <h3>Trapezium Cake</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Anniversary%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Trapezium Cake - ₦80,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastycake3.jpg" alt="Birthday Cake">
+          </div>
+          <h3>Birthday Cake</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Birthday%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦80,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dennybirthdaycake1.jpg" alt="Birthday Cake">
+          </div>
+          <h3>Birthday Cake</h3>
+          <p>₦25,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Birthday%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦25,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <div class="menu-card filter-item cakes" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastybuttercream.jpg" alt="Butter Cream Cake">
+          </div>
+          <h3>Butter Cream Cake</h3>
+          <p>₦35,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20ButterCreamCake%20Cake"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦35,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <!-- Example Pastry -->
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastysmallchops1.jpg" alt="Small Chops">
+          </div>
+          <h3>Small Chops</h3>
+          <p>₦35,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Small%20Chops"
+            class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Small Chops - ₦35,000')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastychocolatemilkydougnut.jpg" alt="Chocolate Milky Doughnut">
+          </div>
+          <h3>Chocolate Milky Doughnut</h3>
+          <p>₦4,500 / box</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Chocolate%20Milky%20Doughnut"
+            class="menu-btn">Order
+            Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Chocolate Milky Doughnut - ₦4,500')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dennyegroll1.jpg" alt="Egg Roll">
+          </div>
+          <h3>Egg Roll</h3>
+          <p>2,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Egg%20Roll" class="menu-btn">Order
+            Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Egg Roll- ₦2,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastymilkypuffpuff.jpg" alt="Milky Puff Puff">
+          </div>
+          <h3>Milky Puff Puff</h3>
+          <p>₦3,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Milky%20Puff%20Puff"
+            class="menu-btn">Order
+            Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Milky Puff Puff - ₦3,000')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastyicecream.jpg" alt="Ice Cream">
+          </div>
+          <h3>Ice Cream</h3>
+          <p>₦3,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Ice%20Cream" class="menu-btn">Order
+            Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Ice Cream - ₦3,000')">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="menu-card filter-item pastries" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastycakeparfait.jpg" alt="Cake Parfait">
+          </div>
+          <h3>Cake Parfait</h3>
+          <p>₦5,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Cake%20Parfait"
+            class="menu-btn">Order
+            Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Cake parfait - ₦5,000')">
+            Add to Cart
+          </button>
+        </div>
+
+
+        <!-- suprise Package -->
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastysuprisepackage.jpg" alt="Suprise Package">
+          </div>
+          <h3>Girlfriend's Day Package</h3>
+
+          <p>₦1.5000000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastysuprisepackage2.jpg" alt="Suprise Package">
+          </div>
+          <h3>Birthday Package</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastymoneyboque2.jpg" alt="Suprise Package">
+          </div>
+          <h3>Suprise Package</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastysuprisepackage3.jpg" alt="Suprise Package">
+          </div>
+          <h3>Suprise Package</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastysuprisepackage4.jpg" alt="Suprise Package">
+          </div>
+          <h3>Valentine Package</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastyfullpackage.jpg" alt="Suprise Package">
+          </div>
+          <h3>Suprise Package</h3>
+          <p>₦520,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
+            class="menu-btn">Order Now</a>
+        </div>
+
+
+        <!-- Example Makeup -->
+        <div class="menu-card filter-item makeup" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastymakeup4.jpg" alt="Party Glam">
+          </div>
+          <h3>Party Glam</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
+            Now</a>
+        </div>
+
+        <div class="menu-card filter-item makeup" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastymakeup.jpg" alt="Party Glam">
+          </div>
+          <h3>Party Glam</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
+            Now</a>
+        </div>
+        <div class="menu-card filter-item makeup" data-aos="fade-up">
+          <div class="menu-image">
+            <img src="assets/img/dynastymakeup5 (1).jpg" alt="Party Glam">
+          </div>
+          <h3>Traditional Bridal</h3>
+          <p>₦80,000</p>
+          <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="why-choose-section">
+    <div class="container text-center">
+
+      <span class="about-tag">Why Choose Us</span>
+      <h2 style="color:  #e95f72;">Why Choose Denny G</h2>
+      <p class="why-intro">
+        We don’t just deliver services — we create experiences that leave lasting impressions.
+      </p>
+
+      <div class="row g-4 mt-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-card">
+            <h4>Premium Quality</h4>
+            <p>
+              Every cake, pastry, and makeup look is crafted with top-grade materials
+              and professional attention to detail.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-card">
+            <h4>Creative Excellence</h4>
+            <p>
+              We blend creativity with skill to produce elegant designs that stand out
+              for every celebration.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-card">
+            <h4>Trusted & Reliable</h4>
+            <p>
+              Our clients trust us for timely delivery, professionalism,
+              and consistent excellence.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="student-artworks py-5">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Artworks by Our Students</h2>
+        <p class="text-muted">
+          Creative works crafted by our talented students during and after training
+          at Denny G Dynasty Academy.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="row g-4">
+
+        <!-- Artwork -->
+        <div class="col-lg-4 col-md-6">
+          <div class="artwork-card">
+            <img src="assets/img/dynastystudentsproject.jpg" alt="Student Artwork">
+            <div class="artwork-overlay">
+              <h6>Student Artwork</h6>
+              <span>Decorated Cake</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork -->
+        <div class="col-lg-4 col-md-6">
+          <div class="artwork-card">
+            <img src="assets/img/dynastystudentsproject2.jpg" alt="Student Artwork">
+            <div class="artwork-overlay">
+              <h6>Student Artwork</h6>
+              <span>Decorated Cake</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artwork -->
+        <div class="col-lg-4 col-md-6">
+          <div class="artwork-card">
+            <img src="assets/img/dynastystudentspraticals.jpg" alt="Student Artwork">
+            <div class="artwork-overlay">
+              <h6>Student Artwork</h6>
+              <span>Decorated Cake</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADD MORE BY COPYING ABOVE -->
+
+      </div>
+    </div>
+  </section>
+
+  <section class="graduates-section">
+
+    <div class="graduates-header text-center">
+      <h2>Our Graduating Students</h2>
+      <p>
+        Proud graduates of Denny G Dynasty Academy —
+        trained, certified, and ready to create excellence.
+      </p>
+    </div>
+
+    <!-- BIG FEATURED IMAGE -->
+    <div class="graduate-featured">
+      <img src="assets/img/dennystudents3.jpg" alt="Denny G Dynasty Graduates">
+      <div class="graduate-info">
+        <h5>Denny G Dynasty Graduates</h5>
+        <span>Certified Students</span>
+      </div>
+    </div>
+
+    <!-- GRID IMAGES -->
+    <div class="graduates-grid mt-5">
+
+      <div class="graduate-card">
+        <img src="assets/img/dynastygraduatestudates.jpg" alt="Graduate Student">
+        <div class="graduate-info">
+          <h6>Denny G Dynasty Graduate</h6>
+          <span>Certified Student</span>
+        </div>
+      </div>
+
+      <div class="graduate-card">
+        <img src="assets/img/dennystudents4.jpg" alt="Graduate Student">
+        <div class="graduate-info">
+          <h6>Denny G Dynasty Graduate</h6>
+          <span>Certified Student</span>
+        </div>
+      </div>
+
+      <div class="graduate-card">
+        <img src="assets/img/dyggraduatingstudent4.jpg" alt="Graduate Student">
+        <div class="graduate-info">
+          <h6>Denny G Dynasty Graduate</h6>
+          <span>Certified Student</span>
+        </div>
+      </div>
+
+
+      <div class="graduate-card">
+        <img src="assets/img/dynastystudentgraduation.jpg" alt="Graduate Student">
+        <div class="graduate-info">
+          <h6>Denny G Dynasty Graduate</h6>
+          <span>Certified Student</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-lg-4">
+          <h3>Denny G Dynasty Academy</h3>
+          <p>
+            Premium cakes, pastries and professional makeup services
+            designed to bring elegance to every celebration.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Our Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4">
+          <h5>Contact Us</h5>
+          <p>📞 +234 704 391 2511</p>
+          <p>📍 Nigeria</p>
+          <p>📧 info Dennygdynasty@gmail.com</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom text-center mt-4">
+        <p>© 2026 Denny G Dynasty Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2347043912511?text=Hello%20Denny%20Dynasty%20Academy!" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,     // animation speed
+      easing: 'ease-in-out',
+      once: true,         // animate once
+      offset: 120         // trigger point
+    });
+  </script>
+
+
+  <script>
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".filter-item");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        items.forEach(item => {
+          item.classList.remove("show", "hide");
+
+          if (filter === "all" || item.classList.contains(filter)) {
+            item.classList.add("show");
+          } else {
+            item.classList.add("hide");
+          }
+        });
+
+        // VERY IMPORTANT FOR AOS
+        AOS.refreshHard();
+      });
+    });
+  </script>
+
+  <!-- Navbar shrink on scroll -->
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelector('.modern-navbar').classList.toggle('scrolled', window.scrollY > 80);
+    });
+  </script>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.filter-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // remove active class
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        menuItems.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    let cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      document.getElementById("cart-count").innerText = cart.length;
+      renderCart();
+    }
+
+    function renderCart() {
+      let cartItems = document.getElementById("cart-items");
+      cartItems.innerHTML = "";
+
+      cart.forEach((item, index) => {
+        cartItems.innerHTML += `
+        <li>
+          ${item}
+          <button onclick="removeItem(${index})">❌</button>
+        </li>
+      `;
+      });
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      document.getElementById("cart-count").innerText = cart.length;
+      renderCart();
+    }
+
+    function checkoutCart() {
+      if (cart.length === 0) {
+        alert("Your cart is empty");
+        return;
+      }
+
+      let message = "Hello Denny G Dynasty Academy,%0A%0AI want to order:%0A";
+      cart.forEach(item => {
+        message += "- " + item + "%0A";
+      });
+
+      window.open(
+        `https://wa.me/2347043912511?text=${message}`,
+        "_blank"
+      );
+    }
+
+    // Toggle cart modal
+    document.querySelector(".cart-box").onclick = () => {
+      document.getElementById("cartModal").classList.toggle("show-cart");
+    };
+  </script>
+
+
+</body>
+
+</html>
