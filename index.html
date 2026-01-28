@@ -80,28 +80,28 @@
   </div>
 
 
-  <section class="hero-god position-relative">
-    <img src="assets/img/dennygdyacademy.jpg" alt="Luxury Cakes and Beauty" class="img-fluid w-100">
+  <section class="hero-god position-relative mt-5">
+    <img src="assets/img/dennygdyacademy.jpg" alt="Luxury Cakes and Beauty" class="img-fluid w-100 hero-img">
 
     <!-- Overlay -->
-    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.4);"></div>
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
     <!-- Content -->
     <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white px-3">
-      <span class="hero-tag d-block mb-3 fs-6">Luxury Cakes • Pastries • Makeup</span>
+      <span class="hero-tag d-block mb-3">Luxury Cakes • Pastries • Makeup</span>
 
-      <h1 class="display-4 fw-bold mb-3">
+      <h1 class="hero-title fw-bold mb-3">
         DENNYGDYNASTY<br>
         ACADEMY
       </h1>
 
-      <p class="lead mb-4">
+      <p class="hero-text mb-4">
         Premium cakes, pastries, and professional makeup
         designed with elegance for every celebration.
       </p>
 
       <div class="hero-actions mb-4">
-        <a href="about.html" class="btn btn-dark rounded-pill px-4 me-2 mb-2">View Creations</a>
+        <a href="creations.html" class="btn btn-dark rounded-pill px-4 me-2 mb-2">View Creations</a>
         <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 mb-2">Contact Us</a>
       </div>
 
@@ -116,38 +116,46 @@
         </a>
         <a href="https://www.facebook.com" target="_blank" class="text-white fs-4">
           <i class="fab fa-facebook-f"></i>
-          <p></p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Optional CSS -->
   <style>
     .hero-god {
-      position: relative;
-      height: 80vh;
+      height: 100vh;
       overflow: hidden;
     }
 
-    .hero-god img {
-
+    .hero-img {
+      height: 100%;
       object-fit: cover;
-      height: 170%;
     }
 
     .hero-overlay {
-      z-index: 1;
+      background: rgba(0, 0, 0, 0.65);
     }
+
 
     .hero-content {
       z-index: 2;
+      max-width: 900px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+    }
+
+    .hero-text {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .hero-social a {
+      transition: color 0.3s ease;
     }
 
     .hero-social a:hover {
       color: #f8a8b0;
-      /* Pink hover effect */
-      transition: 0.3s;
     }
   </style>
 
@@ -372,11 +380,11 @@
           <div class="menu-image">
             <img src="assets/img/dynastywhitechocolateganache.jpg" alt="Anniversary Cake">
           </div>
-          <h3>Trapezium Cake</h3>
+          <h3>Trapezium Shape Cake</h3>
           <p>₦80,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Anniversary%20Cake"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Trapezium Cake - ₦80,000')">
+          <button class="add-cart-btn" onclick="addToCart('Trapezium Shape Cake - ₦80,000')">
             Add to Cart
           </button>
         </div>
@@ -510,39 +518,48 @@
 
         <!-- suprise Package -->
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastysuprisepackage.jpg" alt="Suprise Package">
           </div>
           <h3>Girlfriend's Day Package</h3>
 
-          <p>₦1.5000000</p>
+          <p>₦500,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Girlfriend Day Package - ₦500,000')">
+            Add to Cart
+          </button>
         </div>
 
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastysuprisepackage2.jpg" alt="Suprise Package">
           </div>
           <h3>Birthday Package</h3>
-          <p>₦80,000</p>
+          <p>₦400,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Birthday Package - ₦400,000')">
+            Add to Cart
+          </button>
         </div>
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastymoneyboque2.jpg" alt="Suprise Package">
           </div>
           <h3>Suprise Package</h3>
-          <p>₦80,000</p>
+          <p>₦100,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦100,000')">
+            Add to Cart
+          </button>
         </div>
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastysuprisepackage3.jpg" alt="Suprise Package">
           </div>
@@ -550,26 +567,35 @@
           <p>₦80,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦80,000')">
+            Add to Cart
+          </button>
         </div>
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastysuprisepackage4.jpg" alt="Suprise Package">
           </div>
           <h3>Valentine Package</h3>
-          <p>₦80,000</p>
+          <p>₦120,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Valentine Package - ₦120,000 ')">
+            Add to Cart
+          </button>
         </div>
 
-        <div class="menu-card filter-item anniversary" data-aos="fade-up">
+        <div class="menu-card filter-item anniversary">
           <div class="menu-image">
             <img src="assets/img/dynastyfullpackage.jpg" alt="Suprise Package">
           </div>
           <h3>Suprise Package</h3>
-          <p>₦520,000</p>
+          <p>₦200,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦200,000')">
+            Add to Cart
+          </button>
         </div>
 
 
@@ -579,9 +605,14 @@
             <img src="assets/img/dynastymakeup4.jpg" alt="Party Glam">
           </div>
           <h3>Party Glam</h3>
-          <p>₦80,000</p>
+          <p>Walk In ₦25,000<br>
+            Out Door ₦50, 000
+          </p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
             Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Party Glam- ₦25,000 / 50, 000')">
+            Add to Cart
+          </button>
         </div>
 
         <div class="menu-card filter-item makeup" data-aos="fade-up">
@@ -589,19 +620,31 @@
             <img src="assets/img/dynastymakeup.jpg" alt="Party Glam">
           </div>
           <h3>Party Glam</h3>
-          <p>₦80,000</p>
+          <p>Walk In ₦25,000<br>
+            Out Door ₦50, 000
+          </p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
             Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Party Glam - ₦25,000 / 50, 000')">
+            Add to Cart
+          </button>
         </div>
+
         <div class="menu-card filter-item makeup" data-aos="fade-up">
           <div class="menu-image">
             <img src="assets/img/dynastymakeup5 (1).jpg" alt="Party Glam">
           </div>
           <h3>Traditional Bridal</h3>
-          <p>₦80,000</p>
+          <p>Walk In ₦25,000<br>
+            Out Door ₦50, 000
+          </p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20Party%20Glam" class="menu-btn">Book
             Now</a>
+          <button class="add-cart-btn" onclick="addToCart('Traditional Bridal - ₦25,000 / 50, 000')">
+            Add to Cart
+          </button>
         </div>
+        
       </div>
     </div>
   </section>
@@ -697,7 +740,7 @@
           <div class="artwork-card">
             <img src="assets/img/dynastystudentspraticals.jpg" alt="Student Artwork">
             <div class="artwork-overlay">
-              <h6>Student Artwork</h6>
+              <h6>Student Artworks</h6>
               <span>Decorated Cake</span>
             </div>
           </div>
@@ -769,6 +812,69 @@
   </section>
 
 
+<section class="testimonials-section py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <span class="about-tag">Testimonials</span>
+      <h2>What Our Clients Say</h2>
+      <p class="text-muted">
+        Real experiences from clients and students of Denny G Dynasty Academy.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+
+      <!-- Testimonial -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “The cake was absolutely stunning and tasted amazing.
+            Everyone at the event kept asking who made it!”
+          </p>
+
+          <div class="testimonial-user">
+            <h6>— Sarah A.</h6>
+            <span>Birthday Client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Learning at Denny G Dynasty Academy changed my baking journey.
+            The training was detailed and hands-on.”
+          </p>
+
+          <div class="testimonial-user">
+            <h6>— Blessing O.</h6>
+            <span>Graduated Student</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Her makeup was flawless! I felt confident and beautiful
+            all through my event.”
+          </p>
+
+          <div class="testimonial-user">
+            <h6>— Anita K.</h6>
+            <span>Makeup Client</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="main-footer">
@@ -801,6 +907,21 @@
           <p>📞 +234 704 391 2511</p>
           <p>📍 Nigeria</p>
           <p>📧 info Dennygdynasty@gmail.com</p>
+          <!-- Social Icons -->
+          <div class="hero-social d-flex justify-content-center gap-3">
+            <a href="https://www.tiktok.com/@dennygdyanastyacedemy?_r=1&_t=ZS-937c5vbVsym" target="_blank"
+              class="text-white fs-4">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/dennygdynasty?igsh=NGhObnY1ejhsYndt" target="_blank"
+              class="text-white fs-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="text-white fs-4">
+              <i class="fab fa-facebook-f"></i>
+              <p></p>
+            </a>
+          </div>
         </div>
 
       </div>

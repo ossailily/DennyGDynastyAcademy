@@ -537,9 +537,26 @@ h2 {
   transition: transform 0.6s ease;
 }
 
+.menu-image1 {
+  width: 100%;
+  height: 250px;
+  /* you can adjust */
+  overflow: hidden;
+}
+
+.menu-image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .menu-card:hover .menu-image img {
   transform: scale(1.06);
 }
+
+
+
 
 .menu-card h3 {
   font-family: 'Playfair Display', serif;
@@ -1702,7 +1719,7 @@ h5 {
 
 .graduates-section {
   padding: 90px 5%;
-  background:  #fdf0f2;
+  background: #fdf0f2;
 }
 
 /* BIG IMAGE */
@@ -1760,15 +1777,16 @@ h5 {
   font-size: 12px;
   opacity: 0.85;
 }
+
 .student-artworks {
-  background:#fdf0f2;
+  background: #fdf0f2;
 }
 
 .artwork-card {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .artwork-card img {
@@ -1788,7 +1806,7 @@ h5 {
   left: 0;
   width: 100%;
   padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: #fff;
 }
 
@@ -1808,6 +1826,7 @@ h5 {
     height: 300px;
   }
 }
+
 .cart-box {
   position: fixed;
   top: 90px;
@@ -1829,7 +1848,7 @@ h5 {
   background: #fff;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: none;
   z-index: 999;
 }
@@ -1848,6 +1867,7 @@ h5 {
 .show-cart {
   display: block;
 }
+
 .add-cart-btn {
   background: #f77c88;
   color: #fff;
@@ -1861,4 +1881,38 @@ h5 {
 
 .add-cart-btn:hover {
   background: #e85d70;
+}
+.testimonials-section {
+  background: #fff5f7;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.testimonial-user h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #e95f72;
+}
+
+.testimonial-user span {
+  font-size: 14px;
+  color: #777;
 }
