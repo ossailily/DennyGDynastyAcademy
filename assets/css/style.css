@@ -1916,3 +1916,39 @@ h5 {
   font-size: 14px;
   color: #777;
 }
+/* =========================
+   RESPONSIVE FIX (MOBILE)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-god {
+    min-height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ABOUT PAGE */
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section img {
+    margin-bottom: 1rem;
+  }
+
+}
