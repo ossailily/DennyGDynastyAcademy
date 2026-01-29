@@ -11,13 +11,17 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--black);
   background: #fdf0f2 !important;
-
   border-color: var(--pink);
   margin: 0 !important;
   padding: 0 !important;
   padding-top: 90px;
   overflow-x: hidden;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
 
 h1,
 h2 {
@@ -70,7 +74,7 @@ h2 {
 
 /* Hamburger */
 .modern-toggler {
-  border: none;
+  border: none !important;
   background: transparent;
   width: 44px;
   height: 44px;
@@ -438,13 +442,6 @@ h2 {
   box-shadow: 0 18px 40px rgba(247, 124, 136, 0.45);
 }
 
-/* Mobile tweak */
-@media (max-width: 576px) {
-  .learn-more-btn {
-    padding: 12px 40px;
-    font-size: 15px;
-  }
-}
 
 /* =========================
    RESPONSIVE
@@ -467,6 +464,10 @@ h2 {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+    .learn-more-btn {
+    padding: 12px 40px;
+    font-size: 15px;
   }
 }
 
@@ -554,9 +555,6 @@ h2 {
 .menu-card:hover .menu-image img {
   transform: scale(1.06);
 }
-
-
-
 
 .menu-card h3 {
   font-family: 'Playfair Display', serif;
