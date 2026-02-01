@@ -36,12 +36,14 @@
       </a>
 
       <!-- Hamburger Toggler -->
-      <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler modern-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+
         <span class="hamburger top"></span>
         <span class="hamburger middle"></span>
         <span class="hamburger bottom"></span>
       </button>
+
 
       <!-- Collapsible Menu -->
       <div class="collapse navbar-collapse" id="mainNav">
@@ -61,12 +63,15 @@
         </a>
 
       </div>
+
     </div>
+
   </nav>
 
 
+
   <!-- CART ICON -->
-  <div class="cart-box">
+  <div class="cart-box mt-4">
     🛒 Cart (<span id="cart-count">0</span>)
   </div>
   <!-- CART MODAL -->
@@ -88,7 +93,7 @@
 
     <!-- Content -->
     <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white px-3">
-      <span class="hero-tag d-block mb-3">Luxury Cakes • Pastries • Makeup</span>
+      <span class="hero-tag d-block mb-3">Luxury Cakes • Pastries • Makeup • Training</span>
 
       <h1 class="hero-title fw-bold mb-3">
         DENNYGDYNASTY<br>
@@ -155,7 +160,17 @@
     }
 
     .hero-social a:hover {
-      color: #f8a8b0;
+      color: #f8a8b0 !important;
+    }
+
+    .hero-actions .btn-dark {
+      background-color: #e95f72 !important;
+    }
+
+    .hero-actions .btn-outline-light:hover {
+      background-color: #e95f72 !important;
+      color: #fff !important;
+
     }
   </style>
 
@@ -395,10 +410,10 @@
             <img src="assets/img/dynastycake3.jpg" alt="Birthday Cake">
           </div>
           <h3>Birthday Cake</h3>
-          <p>₦80,000</p>
+          <p>₦50,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Birthday%20Cake"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦80,000')">
+          <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦50,000')">
             Add to Cart
           </button>
         </div>
@@ -423,7 +438,7 @@
             <img src="assets/img/dynastybuttercream.jpg" alt="Butter Cream Cake">
           </div>
           <h3>Butter Cream Cake</h3>
-          <p>₦35,000</p>
+          <p>₦35,000 / Each</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20ButterCreamCake%20Cake"
             class="menu-btn">Order Now</a>
           <button class="add-cart-btn" onclick="addToCart('Birthday Cake - ₦35,000')">
@@ -438,10 +453,10 @@
             <img src="assets/img/dynastysmallchops1.jpg" alt="Small Chops">
           </div>
           <h3>Small Chops</h3>
-          <p>₦35,000</p>
+          <p>₦40,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Small%20Chops"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Small Chops - ₦35,000')">
+          <button class="add-cart-btn" onclick="addToCart('Small Chops - ₦40,000')">
             Add to Cart
           </button>
         </div>
@@ -451,7 +466,7 @@
             <img src="assets/img/dynastychocolatemilkydougnut.jpg" alt="Chocolate Milky Doughnut">
           </div>
           <h3>Chocolate Milky Doughnut</h3>
-          <p>₦4,500 / box</p>
+          <p>₦4,500 / Box of 3</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Chocolate%20Milky%20Doughnut"
             class="menu-btn">Order
             Now</a>
@@ -465,7 +480,7 @@
             <img src="assets/img/dennyegroll1.jpg" alt="Egg Roll">
           </div>
           <h3>Egg Roll</h3>
-          <p>2,000</p>
+          <p>2,000 / Each</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Egg%20Roll" class="menu-btn">Order
             Now</a>
           <button class="add-cart-btn" onclick="addToCart('Egg Roll- ₦2,000')">
@@ -493,7 +508,7 @@
             <img src="assets/img/dynastyicecream.jpg" alt="Ice Cream">
           </div>
           <h3>Ice Cream</h3>
-          <p>₦3,000</p>
+          <p>₦3,000 / Each</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Ice%20Cream" class="menu-btn">Order
             Now</a>
           <button class="add-cart-btn" onclick="addToCart('Ice Cream - ₦3,000')">
@@ -506,7 +521,7 @@
             <img src="assets/img/dynastycakeparfait.jpg" alt="Cake Parfait">
           </div>
           <h3>Cake Parfait</h3>
-          <p>₦5,000</p>
+          <p>₦5,000 / Each</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20order%20Cake%20Parfait"
             class="menu-btn">Order
             Now</a>
@@ -551,10 +566,10 @@
             <img src="assets/img/dynastymoneyboque2.jpg" alt="Suprise Package">
           </div>
           <h3>Suprise Package</h3>
-          <p>₦100,000</p>
+          <p>₦200,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦100,000')">
+          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦200,000')">
             Add to Cart
           </button>
         </div>
@@ -564,10 +579,10 @@
             <img src="assets/img/dynastysuprisepackage3.jpg" alt="Suprise Package">
           </div>
           <h3>Suprise Package</h3>
-          <p>₦80,000</p>
+          <p>₦150,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦80,000')">
+          <button class="add-cart-btn" onclick="addToCart('Suprise Package - ₦150,000')">
             Add to Cart
           </button>
         </div>
@@ -577,10 +592,10 @@
             <img src="assets/img/dynastysuprisepackage4.jpg" alt="Suprise Package">
           </div>
           <h3>Valentine Package</h3>
-          <p>₦120,000</p>
+          <p>₦150,000</p>
           <a href="https://wa.me/2347043912511?text=Hello%20I%20want%20to%20book%20SuprisePackage%20Makeup"
             class="menu-btn">Order Now</a>
-          <button class="add-cart-btn" onclick="addToCart('Valentine Package - ₦120,000 ')">
+          <button class="add-cart-btn" onclick="addToCart('Valentine Package - ₦150,000 ')">
             Add to Cart
           </button>
         </div>

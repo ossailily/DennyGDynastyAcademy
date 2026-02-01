@@ -72,29 +72,30 @@ h2 {
   width: 60%;
 }
 
-/* Hamburger */
-.modern-toggler {
+/* === BASE TOGGLER BUTTON === */
+.navbar-toggler {
   border: none !important;
-  background: transparent;
+  background: transparent !important;
   width: 44px;
   height: 44px;
   position: relative;
+  z-index: 1051;
 }
 
+/* === HAMBURGER LINES (THIS IS WHAT YOU WERE MISSING) === */
 .hamburger {
   position: absolute;
   left: 50%;
   width: 26px;
   height: 3px;
-  background: var(--black);
+  background-color: #000; /* CHANGE TO #fff IF NAVBAR IS DARK */
   border-radius: 2px;
-  transition: var(--transition);
-  transform-origin: center;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
 
 .hamburger.top {
-  top: 10px;
-  transform: translateX(-50%);
+  top: 12px;
 }
 
 .hamburger.middle {
@@ -103,10 +104,17 @@ h2 {
 }
 
 .hamburger.bottom {
-  bottom: 10px;
-  transform: translateX(-50%);
+  bottom: 12px;
+}
+/* Remove focus & active outlines */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
+/* X animation */
 .navbar-toggler:not(.collapsed) .hamburger.top {
   transform: translateX(-50%) translateY(8px) rotate(135deg);
 }
@@ -118,6 +126,14 @@ h2 {
 .navbar-toggler:not(.collapsed) .hamburger.bottom {
   transform: translateX(-50%) translateY(-8px) rotate(-135deg);
 }
+
+/* Force mobile visibility */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block !important;
+  }
+}
+
 
 /* Contact Button – dark, pill-shaped, right-aligned */
 .contact-btn {
