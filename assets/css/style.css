@@ -26,14 +26,14 @@ body {
 
 /* Remove blue highlight on iPhone */
 * {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 .filter-btn,
 .nav-link,
 button,
 a {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 
